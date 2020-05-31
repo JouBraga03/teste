@@ -9,6 +9,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 
 import NumeroProcesso from "../NumeroProcesso";
 import NomeForo from "../NomeForo";
+import DeletarProcesso from "../DeletarProcesso";
 
 const useStyles = makeStyles((theme) => ({
   select: {
@@ -72,6 +73,10 @@ const Linha = () => {
 
           <Grid item xs={2} className={classes.gridSpace}>
             {chamaSelect()}
+          </Grid>
+
+          <Grid item xs={1}>
+            <DeletarProcesso />
           </Grid>
         </Grid>
       </WrapperNumeroProcessoEForo>

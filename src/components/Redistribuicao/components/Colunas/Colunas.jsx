@@ -12,7 +12,8 @@ const colunas = [
   "Competência",
   "Classe",
   "Assuntos",
-  "Outroa Assuntos",
+  "Outros Assuntos",
+  "",
 ];
 
 const useStyles = makeStyles(() => ({

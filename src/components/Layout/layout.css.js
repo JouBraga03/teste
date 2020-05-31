@@ -7,7 +7,7 @@ export const LayoutWrapper = styled.div`
   grid-template-columns: 1fr;
   -ms-grid-columns: 1fr;
 
-  grid-template-rows: 15vh 75vh 10vh;
+  grid-template-rows: 10vh 80vh 10vh;
   -ms-grid-template-rows: 15vh 75vh 10vh;
 
   grid-template-areas:

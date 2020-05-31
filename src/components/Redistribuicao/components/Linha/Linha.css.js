@@ -12,8 +12,6 @@ export const WrapperNumeroProcessoEForo = styled.div`
   background: #fff;
   padding: 0.7em 0.6em;
   margin: 1em 0;
-
-  border-left: "2px solid red";
 `;
 
 export default {
