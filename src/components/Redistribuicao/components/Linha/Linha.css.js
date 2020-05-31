@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const WrapperLinha = styled.div`
+  border-left: 3px solid red;
+`;
+
 export const WrapperNumeroProcessoEForo = styled.div`
   display: flex;
   justify-content: center;
@@ -7,8 +11,12 @@ export const WrapperNumeroProcessoEForo = styled.div`
   flex-direction: column;
   background: #fff;
   padding: 0.7em 0.6em;
+  margin: 1em 0;
+
+  border-left: "2px solid red";
 `;
 
 export default {
+  WrapperLinha,
   WrapperNumeroProcessoEForo,
 };

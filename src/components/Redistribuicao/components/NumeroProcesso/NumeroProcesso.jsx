@@ -7,7 +7,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(() => ({
   typography: {
-    fontSize: "12px",
+    fontSize: "11px",
     fontWeight: 700,
   },
 }));

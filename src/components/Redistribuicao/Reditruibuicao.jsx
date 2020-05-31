@@ -9,6 +9,16 @@ const Redistribuicao = () => {
       <Colunas />
 
       <Linha />
+
+      <Linha />
+
+      <Linha />
+
+      <Linha />
+
+      <Linha />
+
+      <Linha />
     </>
   );
 };
