@@ -3,8 +3,23 @@ import PropTypes from "prop-types";
 
 import Typograph from "@material-ui/core/Typography";
 
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles(() => ({
+  typography: {
+    fontSize: "12px",
+    fontWeight: 700,
+  },
+}));
+
 const NumeroProcesso = ({ numeroProcesso }) => {
-  return <Typograph component="h3">{numeroProcesso}</Typograph>;
+  const classes = useStyles();
+
+  return (
+    <Typograph component="h3" className={classes.typography}>
+      {numeroProcesso}
+    </Typograph>
+  );
 };
 
 NumeroProcesso.propTypes = {
