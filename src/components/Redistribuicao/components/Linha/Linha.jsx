@@ -1,7 +1,15 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 
-import { WrapperLinha, WrapperNumeroProcessoEForo } from "./Linha.css";
+import {
+  WrapperLinha,
+  WrapperProcessos,
+  WrapperCompetencia,
+  WrapperClasse,
+  WrapperAssuntos,
+  WrapperOutrosAssuntos,
+  WrapperAcoes,
+} from "./Linha.css";
 
 import { makeStyles } from "@material-ui/core/styles";
 import Select from "@material-ui/core/Select";
@@ -52,34 +60,22 @@ const Linha = () => {
 
   return (
     <WrapperLinha>
-      <WrapperNumeroProcessoEForo>
-        <Grid container wrap="nowrap" spacing={0}>
-          <Grid item xs={2} className={classes.gridSpaceFirst}>
-            <NumeroProcesso numeroProcesso="001632-04-2020.0.00.0999" />
-            <NomeForo nome="Foro Catanduva" />
-          </Grid>
+      <WrapperProcessos>
+        <NumeroProcesso numeroProcesso="001632-04-2020.0.00.0999" />
+        <NomeForo nome="Foro Catanduva" />
+      </WrapperProcessos>
 
-          <Grid item xs={2} className={classes.gridSpace}>
-            {chamaSelect()}
-          </Grid>
+      <WrapperCompetencia>{chamaSelect()}</WrapperCompetencia>
 
-          <Grid item xs={2} className={classes.gridSpace}>
-            {chamaSelect()}
-          </Grid>
+      <WrapperClasse>{chamaSelect()}</WrapperClasse>
 
-          <Grid item xs={2} className={classes.gridSpace}>
-            {chamaSelect()}
-          </Grid>
+      <WrapperAssuntos>{chamaSelect()}</WrapperAssuntos>
 
-          <Grid item xs={2} className={classes.gridSpace}>
-            {chamaSelect()}
-          </Grid>
+      <WrapperOutrosAssuntos>{chamaSelect()}</WrapperOutrosAssuntos>
 
-          <Grid item xs={1}>
-            <DeletarProcesso />
-          </Grid>
-        </Grid>
-      </WrapperNumeroProcessoEForo>
+      <WrapperAcoes>
+        <DeletarProcesso />
+      </WrapperAcoes>
     </WrapperLinha>
   );
 };

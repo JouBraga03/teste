@@ -1,20 +1,18 @@
 import React from "react";
 
-import Grid from "@material-ui/core/Grid";
 import Typograph from "@material-ui/core/Typography";
 
-import { WrapperColuna } from "./Colunas.css";
+import {
+  WrapperColuna,
+  WrapperProcessos,
+  WrapperCompetencia,
+  WrapperClasse,
+  WrapperProcessosAssuntos,
+  WrapperOutrosAssuntos,
+  WrapperAcoes,
+} from "./Colunas.css";
 
 import { makeStyles } from "@material-ui/core/styles";
-
-const colunas = [
-  "Processos",
-  "Competência",
-  "Classe",
-  "Assuntos",
-  "Outros Assuntos",
-  "",
-];
 
 const useStyles = makeStyles(() => ({
   typography: {
@@ -29,17 +27,29 @@ const useStyles = makeStyles(() => ({
 const Colunas = () => {
   const classes = useStyles();
 
+  const showText = (text) => (
+    <Typograph component="h3" className={classes.gridSpace}>
+      {text}
+    </Typograph>
+  );
+
   return (
     <WrapperColuna>
-      <Grid container wrap="nowrap">
-        {colunas.map((coluna) => (
-          <Grid item xs={2} className={classes.gridSpace}>
-            <Typograph component="h3" className={classes.typography}>
-              {coluna}
-            </Typograph>
-          </Grid>
-        ))}
-      </Grid>
+      <WrapperProcessos>{showText("Processo")}</WrapperProcessos>
+
+      <WrapperCompetencia>{showText("Competência")}</WrapperCompetencia>
+
+      <WrapperClasse>{showText("Classe")}</WrapperClasse>
+
+      <WrapperProcessosAssuntos>
+        {showText("Assuntos")}
+      </WrapperProcessosAssuntos>
+
+      <WrapperOutrosAssuntos>
+        {showText("Outros Assuntos")}
+      </WrapperOutrosAssuntos>
+
+      <WrapperAcoes />
     </WrapperColuna>
   );
 };
